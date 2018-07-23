@@ -1,5 +1,5 @@
 #!/bin/sh
-#Download gz file from a URL
+#Make a new directory on desktop to download to
 mkdir /Users/andyli-org/Desktop/test/error
 
 #navigate to new error directory
@@ -8,10 +8,10 @@ cd /Users/andyli-org/Desktop/test/error && \
 #Go to URL and download gz file
 curl -O https://s3-us-west-1.amazonaws.com/doug-log-test/logs.txt.gz && \
 
-#Open gz file
+#Open gz file 
 gunzip logs.txt.gz                && \
 
-#Count and output number of errors
+#Count and output number of errors found within
 echo "The number of errors are:"
 grep -o 'error' logs.txt | wc -l
 
